@@ -21,8 +21,8 @@ export default defineComponent({
 
 <template>
   <div id="app">
-    <le-app>
-      <le-button @click="counter++">Add</le-button>
+    <le-app block>
+      <le-button xl @click="counter++">Add</le-button>
       <span>{{counter}}</span>
     </le-app>
   </div>
