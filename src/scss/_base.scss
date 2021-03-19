@@ -1,0 +1,12 @@
+* {outline: none;margin: 0;padding: 0;}
+
+body {overflow-x: hidden;}
+
+a {text-decoration: none;}
+
+.le-app, .le-app *, .le-app :before, .le-app :after {box-sizing: border-box;}
+
+.le-main {
+  padding-left: 3 * $base-increment;
+  padding-right: 3 * $base-increment;
+}
