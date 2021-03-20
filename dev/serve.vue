@@ -22,8 +22,10 @@ export default defineComponent({
 <template>
   <div id="app">
     <le-app block>
-      <le-button xl @click="counter++">Add</le-button>
-      <span>{{counter}}</span>
+      <le-flex>
+        <le-button class="grow" @click="counter++">Add</le-button>
+      </le-flex>
+      <le-flex justify-center>{{counter}}</le-flex>
     </le-app>
   </div>
 </template>
