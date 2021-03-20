@@ -11,7 +11,7 @@ interface SampleData {
 }
 
 export default /*#__PURE__*/defineComponent({
-  name: 'LeewayUiSample', // vue component name
+  name: 'LeewardUiSample', // vue component name
   data(): SampleData {
     return {
       counter: 5,
@@ -52,7 +52,7 @@ export default /*#__PURE__*/defineComponent({
 </script>
 
 <template>
-  <div class="leeway-ui-sample">
+  <div class="leeward-ui-sample">
     <p>The counter was {{ changedBy }} to <b>{{ counter }}</b>.</p>
     <button @click="increment">
       Click +1
@@ -73,7 +73,7 @@ export default /*#__PURE__*/defineComponent({
 </template>
 
 <style scoped>
-  .leeway-ui-sample {
+  .leeward-ui-sample {
     display: block;
     width: 400px;
     margin: 25px auto;
@@ -82,7 +82,7 @@ export default /*#__PURE__*/defineComponent({
     text-align: center;
     padding: 25px;
   }
-  .leeway-ui-sample p {
+  .leeward-ui-sample p {
     margin: 0 0 1em;
   }
 </style>

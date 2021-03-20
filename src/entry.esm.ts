@@ -1,17 +1,17 @@
-import LeewayUI from "./core";
+import LeewardUI from "./core";
 
 // Import vue components
 import * as components from "@/lib-components/index";
 import { Options } from "./utils/config";
 
-const install = LeewayUI.install;
-LeewayUI.install = (app, options: Options) =>
-  install.call(LeewayUI, app, { components, ...options });
+const install = LeewardUI.install;
+LeewardUI.install = (app, options: Options) =>
+  install.call(LeewardUI, app, { components, ...options });
 
-export default LeewayUI;
+export default LeewardUI;
 
 // install function executed by Vue.use()
-// const install: Exclude<Plugin['install'], undefined> = function installLeewayUi(app: App) {
+// const install: Exclude<Plugin['install'], undefined> = function installLeewardUi(app: App) {
 //   Object.entries(components).forEach(([componentName, component]) => {
 //     app.component(componentName, component);
 //   });

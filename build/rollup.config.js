@@ -86,7 +86,7 @@ if (!argv.format || argv.format === 'es') {
     input: 'src/entry.esm.ts',
     external,
     output: {
-      file: 'dist/leeway-ui.esm.js',
+      file: 'dist/leeward-ui.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -118,9 +118,9 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/leeway-ui.ssr.js',
+      file: 'dist/leeward-ui.ssr.js',
       format: 'cjs',
-      name: 'LeewayUi',
+      name: 'LeewardUi',
       exports: 'auto',
       globals,
     },
@@ -142,9 +142,9 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/leeway-ui.min.js',
+      file: 'dist/leeward-ui.min.js',
       format: 'iife',
-      name: 'LeewayUi',
+      name: 'LeewardUi',
       exports: 'auto',
       globals,
     },

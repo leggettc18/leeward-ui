@@ -1,7 +1,6 @@
-import { DefineComponent, Plugin } from 'vue';
+import { DefineComponent, Plugin } from "vue";
 
+declare const LeewardUi: Exclude<Plugin["install"], undefined>;
+export default LeewardUi;
 
-declare const LeewayUi: Exclude<Plugin['install'], undefined>;
-export default LeewayUi;
-
-export const LeewayUiSample: DefineComponent<{}, {}, any>;
+export const LeewardUiSample: DefineComponent<{}, {}, any>;

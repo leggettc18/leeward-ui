@@ -3,13 +3,13 @@ import LeButton from "@/lib-components/le-button.vue";
 import LeApp from "@/lib-components/le-app.vue";
 import { defineComponent } from "vue";
 // Uncomment import and local "components" registration if library is not registered globally.
-// import { LeewayUiSample } from '@/entry.esm';
+// import { LeewardUiSample } from '@/entry.esm';
 
 export default defineComponent({
   components: { LeButton, LeApp },
   name: "ServeDev",
   // components: {
-  //  LeewayUiSample,
+  //  LeewardUiSample,
   // }
   data() {
     return {

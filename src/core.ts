@@ -18,8 +18,8 @@ const shadeColor = (col: string, amt: number) => {
   );
 };
 
-export default class LeewayUI {
-  static instance: null | LeewayUI = null;
+export default class LeewardUI {
+  static instance: null | LeewardUI = null;
   static vueInstance: null | App = null; // Needed until constructor.
   static registered = false;
   static version = "1.0.0";
@@ -77,14 +77,14 @@ export default class LeewayUI {
     //   }
     // })
 
-    LeewayUI.registered = true;
+    LeewardUI.registered = true;
   }
 
   // Singleton.
   constructor(app: App, options: Options) {
-    if (LeewayUI.instance) return LeewayUI.instance;
+    if (LeewardUI.instance) return LeewardUI.instance;
     else {
-      if (!LeewayUI.registered) app.use(LeewayUI);
+      if (!LeewardUI.registered) app.use(LeewardUI);
 
       // Merge user options into default config.
       mergeConfig(options);
@@ -118,11 +118,11 @@ export default class LeewayUI {
         }
       }
 
-      LeewayUI.instance = this;
+      LeewardUI.instance = this;
       // Make waveui reactive and expose the single instance in Vue.
-      app.config.globalProperties.$leewayui = reactive(this);
+      app.config.globalProperties.$leewardui = reactive(this);
     }
   }
 }
 
-LeewayUI.version = "__VERSION__";
+LeewardUI.version = "__VERSION__";

@@ -1,15 +1,15 @@
 {
-  "name": "leeway-ui",
+  "name": "leeward-ui",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/leeway-ui.ssr.js",
-  "browser": "dist/leeway-ui.esm.js",
-  "module": "dist/leeway-ui.esm.js",
-  "unpkg": "dist/leeway-ui.min.js",
-  "types": "leeway-ui.d.ts",
+  "main": "dist/leeward-ui.ssr.js",
+  "browser": "dist/leeward-ui.esm.js",
+  "module": "dist/leeward-ui.esm.js",
+  "unpkg": "dist/leeward-ui.min.js",
+  "types": "leeward-ui.d.ts",
   "files": [
     "dist/*",
-    "leeway-ui.d.ts",
+    "leeward-ui.d.ts",
     "src/**/*.vue"
   ],
   "sideEffects": false,

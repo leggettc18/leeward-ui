@@ -24,8 +24,8 @@ export default defineComponent({
   },
   setup() {
     let currentBreakpoint: string | null = null;
-    const leewayui = getCurrentInstance()?.appContext.config.globalProperties
-      .$leewayui;
+    const leewardui = getCurrentInstance()?.appContext.config.globalProperties
+      .$leewardui;
     const getBreakpoint = () => {
       const width = window.innerWidth;
       const breakpoints = breakpointsValues.slice(0);
@@ -36,7 +36,7 @@ export default defineComponent({
 
       if (breakpoint !== currentBreakpoint) {
         currentBreakpoint = breakpoint;
-        leewayui.breakpoint = {
+        leewardui.breakpoint = {
           name: breakpoint,
           xs: breakpoint === "xs",
           sm: breakpoint === "sm",
@@ -47,7 +47,7 @@ export default defineComponent({
         };
       }
 
-      leewayui.breakpoint.width = width;
+      leewardui.breakpoint.width = width;
     };
 
     const dynamicStyles = () => {
@@ -97,9 +97,9 @@ export default defineComponent({
     };
 
     onMounted(() => {
-      if (!document.getElementById("leeway-ui-styles")) {
+      if (!document.getElementById("leeward-ui-styles")) {
         const css = document.createElement("style");
-        css.id = "leeway-ui-styles";
+        css.id = "leeward-ui-styles";
         css.innerHTML = dynamicStyles();
 
         document.head.appendChild(css);
