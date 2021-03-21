@@ -1,0 +1,8 @@
+{
+    "name": "@leeward-ui/utils",
+    "version": "0.0.0",
+    "license": "MIT",
+    "peerDependencies": {
+        "vue": "^3.0.7"
+    }
+}
