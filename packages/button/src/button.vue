@@ -26,15 +26,9 @@ component.le-button(
 </template>
 
 <script lang='ts'>
-import {
-  computed,
-  defineComponent,
-  getCurrentInstance,
-  onMounted,
-  PropType,
-} from "vue";
+import { computed, defineComponent, getCurrentInstance, PropType } from "vue";
 
-export interface ILeButtonProps {
+interface ILeButtonProps {
   color?: string;
   bgColor?: string;
   dark?: boolean;
@@ -188,11 +182,6 @@ export default defineComponent({
             : props.height) || null,
         zIndex: props.zIndex || props.zIndex === 0 || null,
       };
-    });
-
-    onMounted(() => {
-      console.log(classes.value["size--xl"]);
-      console.log(classes.value["primary--bg"]);
     });
 
     return {

@@ -1,4 +1,4 @@
-import { Component } from "@vue/runtime-core";
+import { SFCWithInstall } from "./types";
 
 export interface Config {
   [K: string]: Object | undefined;
@@ -13,9 +13,8 @@ export interface Config {
 interface ColorShades {
   [K: string]: string;
 }
-
 interface Components {
-  [K: string]: Component;
+  [K: string]: SFCWithInstall<any>;
 }
 
 export interface Options {

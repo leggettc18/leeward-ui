@@ -48,7 +48,7 @@ module.exports = {
           {
             root: ['leeward-ui'],
             alias: {
-              '@leeward-ui': 'leeward-ui/lib',
+              '@leeward-ui': 'leeward-ui/dist',
             },
           },
         ],

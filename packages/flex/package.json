@@ -1,0 +1,13 @@
+{
+    "name": "@leeward-ui/flex",
+    "version": "0.0.0",
+    "main": "dist/index.js",
+    "license": "MIT",
+    "module": "./index.ts",
+    "files": [
+        "dist"
+    ],
+    "peerDependencies": {
+        "vue": "^3.0.7"
+    }
+}

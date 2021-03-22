@@ -78,7 +78,7 @@ const config = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.json', '.vue'],
   },
   externals,
   plugins,

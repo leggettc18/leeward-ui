@@ -2,9 +2,11 @@ import LeewardUI from "./core";
 
 // Import vue components
 import LeButton from "@leeward-ui/button";
+import LeApp from "@leeward-ui/app";
+import LeFlex from "@leeward-ui/flex";
 import { Options } from "@leeward-ui/utils/config";
 
-const components = [LeButton];
+const components = [LeApp, LeButton, LeFlex];
 
 const install = LeewardUI.install;
 LeewardUI.install = (app, options: Options) =>
