@@ -20,7 +20,9 @@ export default defineComponent({
   <div id="app">
     <le-app block>
       <le-flex>
-        <le-button class="grow" @click="counter++">Add</le-button>
+        <le-button class="grow" @click="counter++">
+          <le-icon>wi-plus</le-icon>Add
+        </le-button>
       </le-flex>
       <le-flex justify-center>{{counter}}</le-flex>
     </le-app>

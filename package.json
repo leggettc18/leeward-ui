@@ -43,6 +43,7 @@
     "@vue/cli-service": "^4.5.10",
     "@vue/compiler-sfc": "^3.0.5",
     "cross-env": "^7.0.3",
+    "material-design-icons": "^3.0.1",
     "minimist": "^1.2.5",
     "postcss": "^8.2.3",
     "rollup": "^2.36.1",
