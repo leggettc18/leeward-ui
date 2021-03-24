@@ -35,7 +35,6 @@ export default defineComponent({
       valid,
       inputName,
       validate,
-      formEl,
     };
   },
 });
