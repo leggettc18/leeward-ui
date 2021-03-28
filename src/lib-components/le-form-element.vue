@@ -24,14 +24,6 @@ import { IRegistration, IValidateElement } from "@/utils/types";
 export default defineComponent({
   name: "le-form-element",
 
-  inject: {
-    formRegister: { default: null },
-    formUnregister: { default: null },
-    validateElement: { default: null },
-    noKeyupValidation: { default: false },
-    noBlurValidation: { default: false },
-  },
-
   props: {
     valid: { required: true },
     disabled: { type: Boolean },

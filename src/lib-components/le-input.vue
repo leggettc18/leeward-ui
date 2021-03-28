@@ -97,13 +97,16 @@ component(
 
 import { defineComponent } from "@vue/runtime-core";
 import { computed, ref, watch } from "vue";
-import FormElementMixin from "@/mixins/form-elements";
+import { useFormElement } from "@/composables/form-elements";
 
 export default defineComponent({
   name: "le-input",
-  mixins: [FormElementMixin],
-
   props: {
+    name: { type: String },
+    disabled: { type: Boolean },
+    readonly: { type: Boolean },
+    required: { type: Boolean },
+    validators: { type: Array },
     modelValue: { default: "" },
     type: { type: String, default: "text" },
     label: { type: String },
@@ -241,6 +244,7 @@ export default defineComponent({
       isFocused,
       hasValue,
       hasLabel,
+      ...useFormElement({ name: props.name }),
     };
   },
 });

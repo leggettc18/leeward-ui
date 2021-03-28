@@ -26,7 +26,7 @@ export default defineComponent({
       </le-flex>
       <le-flex justify-center>{{counter}}</le-flex>
       <le-form>
-        <le-input>Label</le-input>
+        <le-input name="test-input">Label</le-input>
       </le-form>
     </le-app>
   </div>
