@@ -1,4 +1,4 @@
-import { inject } from "@vue/runtime-core";
+import { inject, Ref } from "@vue/runtime-core";
 import { computed, getCurrentInstance, ref } from "vue";
 import { IRegistration } from "@/utils/types";
 
@@ -15,12 +15,12 @@ import { IRegistration } from "@/utils/types";
 interface FormElementProps {
   name?: string;
   type?: string;
+  formEl?: Ref<HTMLFormElement>;
 }
 
 export function useFormElement(props: FormElementProps) {
   const formRegister: IRegistration = () => {};
   const valid: boolean | null = null;
-  const formEl = ref<null | HTMLFormElement>(null);
 
   inject("formRegister", formRegister);
 
@@ -34,7 +34,7 @@ export function useFormElement(props: FormElementProps) {
   });
 
   const validate = () => {
-    if (formEl.value) formEl.value.validate(props);
+    if (props.formEl?.value) props.formEl.value.validate(props);
   };
 
   return {
