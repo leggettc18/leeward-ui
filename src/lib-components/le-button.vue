@@ -1,28 +1,32 @@
-<template lang="pug">
-component.le-button(
-  :is="route ? 'a' : 'button'",
-  :type="!route && type",
-  :href="(route && (externalLink ? route : resolvedRoute)) || null",
-  :class="classes",
-  :disabled="!!disabled || null",
-  v-on="listeners",
-  :style="styles"
-)
-  le-icon(v-if="icon") {{ icon }}
-  slot(v-else)
-  transition(name="scale-fade")
-    .le-button__loader(v-if="loading")
-      slot(name="loading")
-        svg(viewBox="0 0 40 40")
-          circle(
-            cx="20",
-            cy="20",
-            r="18",
-            fill="transparent",
-            stroke="currentColor",
-            stroke-width="4",
+<template>
+  <component
+    class="le-button"
+    :is="route ? 'a' : 'button'"
+    :type="!route && type"
+    :href="(route && (externalLink ? route : resolvedRoute)) || null"
+    :class="classes"
+    :disabled="!!disabled || null"
+    v-on="listeners"
+    :style="styles"
+  >
+    <le-icon v-if="icon">{{ icon }}</le-icon>
+    <slot v-else></slot>
+    <transition name="scale-fade" class="le-button__loader" v-if="loading">
+      <slot name="loading">
+        <svg viewBox="0 0 40 40">
+          <circle
+            cx="20"
+            cy="20"
+            r="18"
+            fill="transparent"
+            stroke="currentColor"
+            stroke-width="4"
             stroke-linecap="round"
-          )
+          />
+        </svg>
+      </slot>
+    </transition>
+  </component>
 </template>
 
 <script lang='ts'>
